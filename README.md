@@ -18,7 +18,7 @@ adop-nginx provides Nginx with LDAP support. Nginx is a high performance reverse
         -v /var/log:/var/log 
         -p 443:443 \
         -p 80:80 \
-        docker.accenture.com/adop/nginx:VERSION
+        adop/nginx:VERSION
         
 ## Configuration
 

@@ -60,10 +60,10 @@
  * SUCH DAMAGE.
  */
 
- ## Source
- [https://github.com/kvspb/nginx-auth-ldap/blob/master/LICENSE](https://github.com/kvspb/nginx-auth-ldap/blob/master/LICENSE)
+## Source
+[https://github.com/kvspb/nginx-auth-ldap/blob/master/LICENSE](https://github.com/kvspb/nginx-auth-ldap/blob/master/LICENSE)
 
- # Ubuntu operating system, NOTICES AND INFORMATION BEGIN HERE
+# Ubuntu operating system, NOTICES AND INFORMATION BEGIN HERE
 
  Licensing
 Ubuntu is a collection of thousands of computer programs and documents created by a range of individuals, teams and companies.

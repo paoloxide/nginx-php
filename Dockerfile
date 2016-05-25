@@ -9,14 +9,18 @@ ENV NGINX_VERSION 1.8.0
 RUN apt-get update \
     && apt-get install -y \
         ca-certificates \
+        curl \
         git \
         gcc \
-        make \
         libpcre3-dev \
-        zlib1g-dev \
         libldap2-dev \
         libssl-dev \
-        wget
+        make \
+        php5-cli \
+        php5-fpm \
+        vim \
+        wget \
+        zlib1g-dev
 
 # See http://wiki.nginx.org/InstallOptions
 RUN mkdir /var/log/nginx \
@@ -52,5 +56,8 @@ COPY resources/release_note/ /resources/release_note/
 COPY resources/scripts/ /resources/scripts/
 COPY templates/configuration/ /templates/configuration/
 RUN chmod +x /resources/scripts/entrypoint.sh
+RUN chgrp -R www-data /resources/release_note
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin/ --filename=composer
+RUN composer global require "laravel/installer"
 
 CMD ["/resources/scripts/entrypoint.sh"]
